@@ -11,7 +11,6 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    padding: 40px;
 }
 
 .sobre {
@@ -28,6 +27,7 @@ body {
     transform: rotateX(10deg);
     overflow: hidden;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .interior {
