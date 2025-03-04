@@ -1,114 +1,41 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url(https://images.pexels.com/photos/1497471/pexels-photo-1497471.jpeg?cs=srgb&dl=pexels-spencergurley-1497471.jpg&fm=jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Gabo</title>
+    <link rel="stylesheet" href="gabo.css">
+</head>
+<body>
+    <div class="carta">
+        <div class="sobrecubierta" id="sobrecubierta" onclick="abrirCarta()">
+            <p class="texto-sobre">Haz clic para abrir</p>
+        </div>
+        <div class="contenido">
+            <h3>Mi querida Sofi...</h3>
+            <span>
+        Feliz cumpleaños Sofi, me hace bastante feliz ser tu amigo y aprender junto a ti y de ti muchas cosas en el dia a dia, a pesar de que no sabemos comunicarnos del todo con el otro, estoy bastante feliz de estar conectado a ti, he ido mejorando como persona debido a tu apoyo, disfruto mucho cada momento que hablo contigo asi como ayudarte a ti de la misma manera que me ayudas a mi, hemos tenido un largo camino y muchas experiencias las cuales son unicas e incompresibles, pero que me dan la seguridad de continuar buscando ser alguien mejor para ayudarte a ser mejor a tu manera, nos esperan muchas cosas, buenas, malas, divertidas, incomodas, pero gracias a todo lo vivido  y entendido, quiero darte mi mas sincero cariño y apoyo en lo que te propongas y lo que logres, bueno  o malo, siempre te apoyare.
 
-.carta {
-    position: relative;
-    width: 90%; /* Se adapta al tamaño de la pantalla */
-    max-width: 700px;
-    min-height: 400px; /* Reducimos un poco para móviles */
-    background: #fff;
-    border-bottom: solid rgb(31, 31, 31);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    padding: 20px; /* Reducimos padding para móviles */
-}
+Desde ese momento que te conoci jamas senti una conexion tan intensa y tan unica como la que me has brindado tu misma en todos los aspectos, gracias a ti pude retomar mi camino para buscar mejorarlo, aunque sientas que muchas veces no te entiendo o algo, seguire intentando de todas la formas posibles darte animos y la tranquilidad que te mereces, valoro la confianza que tu me das y que me vayas a dar. Esta vez el camino a recorrer es diferente, ambos sabemos bien que nos esperan nuevas experiencias y nuevas resoluciones, aunque jamas diga nada o incluso yo sea cerrado a las palabras, siempre voy a sentir que te debo todo de forma incondicional, estoy feliz de ser tu amigo haber crecido estos años contigo, y estoy feliz de que podre seguir creciendo y entendiendo las cosas, tambien le quiero dar gracias tanto a Sam como a Adri para ayudarme a elegir los colores de las cartas que estas leyendo.
 
-.contenido {
-    font-family: Arial, sans-serif;
-    font-size: 18px; /* Ajustamos tamaño para mejor lectura */
-    color: #000000;
-    max-height: 350px; /* Reducimos un poco */
-    overflow: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    line-height: 1.6;
-    text-align: justify;
-}
+     -Con mucho cariño, Gabo
+            </span>
+            <img src="https://image.tarotprint.com/Major%20Arcana%20Tarot%20Card%20Meanings/Two%20of%20Cups.jpg" alt="imagen1" class="imagen-carta">
+        </div>
+    </div>
+    <script>
+        function abrirCarta() {
+            let sobre = document.getElementById("sobrecubierta");
+            sobre.classList.add("abrir");
 
-/* Ajustar la imagen dentro de la carta */
-.imagen-carta {
-    max-width: 150px; /* Reducimos para móviles */
-    display: block;
-    margin: 15px auto;
-}
+            setTimeout(() => {
+                sobre.style.display = "none";
+            }, 500); 
+        }
+    </script>
+    <div class="menu">
+        <a href="index.html" class="regreso" style="text-decoration: none;">menu</a>
 
-/* Estilos para la sobrecubierta */
-.sobrecubierta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #2c2c2c;
-    transition: transform 0.5s;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Botón de regreso */
-.menu .regreso {
-    margin-top: 1cm;
-    display: inline-block;
-    padding: 10px 20px; /* Reducimos el tamaño */
-    background-color: #838383;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 16px; /* Ajustamos tamaño */
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 20px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.menu .regreso:hover {
-    background-color: #555555;
-    transform: scale(1.1);
-    color: red;
-}
-
-/* 📱 Media Queries para teléfonos */
-@media screen and (max-width: 600px) {
-    .carta {
-        width: 95%; /* Se hace más pequeña en móviles */
-        min-height: 350px;
-        padding: 15px; /* Reducimos padding */
-    }
-
-    .contenido {
-        font-size: 16px; /* Texto más pequeño */
-        max-height: 300px; /* Ajuste en altura */
-        line-height: 1.4;
-    }
-
-    .imagen-carta {
-        max-width: 120px; /* Imagen más pequeña */
-    }
-
-    .texto-sobre {
-        font-size: 16px; /* Texto más pequeño */
-        padding: 8px;
-    }
-
-    .menu .regreso {
-        font-size: 14px; /* Reducimos para móviles */
-        padding: 8px 16px;
-    }
-}
+    </div>
+</body>
+</html>
