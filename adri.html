@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Adri</title>
+    <link rel="stylesheet" href="adri.css">
+</head>
+<body>
+    <div class="carta">
+        <div class="sobrecubierta" id="sobrecubierta" onclick="abrirCarta()">
+            <p class="texto-sobre">Haz clic para abrir</p>
+        </div>
+        <div class="contenido">
+            <h3>Chofi de mi corazón,</h3>
+            <span>
+    En realidad no recuerdo ni cómo ni cuándo nos conocimos, pero sí recuerdo que somos amiguis desde hace mucho y que siempre fuimos más o menos cercanas (aunque no tanto como ahora). Quizá por eso nos tengamos mucha confianza al hablar (a veces demasiada JAJAJA) y conversemos super tranqui de la cosa más funable del mundo o un TMI bien potente... Será que eso se debe a que somos seres iluminados que entienden a qué se refiere la otra?? Soulmates confirmado, definitivamente. 
+
+Otra cosa que recuerdo es que una vez que dijiste que de mi parte no te molesta que te llame Sofía. Me alegra que yo no te genere ese disgusto (lo admito, lo hago de forma inconsciente y por mucho tiempo no me di cuenta que yo hago eso. Bastante, de paso). Me gusta que seamos amiwis. Eres muy importante para mí y disfruto conversar y estar contigo.
+                
+                Te quiere mucho muchito,
+                —Adri ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ</span>
+                
+            <img src="https://cdn.discordapp.com/attachments/1300225598047654001/1346518430031020073/IMG-20250303-WA0023.jpg?ex=67c87a82&is=67c72902&hm=5734fc6f309f879e01e88efae63d10965de32b55711d9cab1d97fed753529634&" alt="imagen1" class="imagen-carta1">
+        </div>
+    </div>
+
+    <script>
+        function abrirCarta() {
+            let sobre = document.getElementById("sobrecubierta");
+            sobre.classList.add("abrir");
+
+            setTimeout(() => {
+                sobre.style.display = "none";
+            }, 500); 
+        }
+    </script>
+    <div class="menu">
+        <a href="index.html" class="regreso" style="text-decoration: none;">menu</a>
+
+    </div>
+</body>
+</html>

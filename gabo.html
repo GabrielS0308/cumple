@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Gabo</title>
+    <link rel="stylesheet" href="gabo.css">
+</head>
+<body>
+    <div class="carta">
+        <div class="sobrecubierta" id="sobrecubierta" onclick="abrirCarta()">
+            <p class="texto-sobre">Haz clic para abrir</p>
+        </div>
+        <div class="contenido">
+            <h3>Mi querida Sofi...</h3>
+            <span>
+        Feliz cumpleaños Sofi, me hace bastante feliz ser tu amigo y aprender junto a ti y de ti muchas cosas en el dia a dia, a pesar de que no sabemos comunicarnos del todo con el otro, estoy bastante feliz de estar conectado a ti, he ido mejorando como persona debido a tu apoyo, disfruto mucho cada momento que hablo contigo asi como ayudarte a ti de la misma manera que me ayudas a mi, hemos tenido un largo camino y muchas experiencias las cuales son unicas e incompresibles, pero que me dan la seguridad de continuar buscando ser alguien mejor para ayudarte a ser mejor a tu manera, nos esperan muchas cosas, buenas, malas, divertidas, incomodas, pero gracias a todo lo vivido  y entendido, quiero darte mi mas sincero cariño y apoyo en lo que te propongas y lo que logres, bueno  o malo, siempre te apoyare.
+
+Desde ese momento que te conoci jamas senti una conexion tan intensa y tan unica como la que me has brindado tu misma en todos los aspectos, gracias a ti pude retomar mi camino para buscar mejorarlo, aunque sientas que muchas veces no te entiendo o algo, seguire intentando de todas la formas posibles darte animos y la tranquilidad que te mereces, valoro la confianza que tu me das y que me vayas a dar. Esta vez el camino a recorrer es diferente, ambos sabemos bien que nos esperan nuevas experiencias y nuevas resoluciones, aunque jamas diga nada o incluso yo sea cerrado a las palabras, siempre voy a sentir que te debo todo de forma incondicional, estoy feliz de ser tu amigo haber crecido estos años contigo, y estoy feliz de que podre seguir creciendo y entendiendo las cosas, tambien le quiero dar gracias tanto a Sam como a Adri para ayudarme a elegir los colores de las cartas que estas leyendo.
+
+     -Con mucho cariño, Gabo
+            </span>
+            <img src="https://image.tarotprint.com/Major%20Arcana%20Tarot%20Card%20Meanings/Two%20of%20Cups.jpg" alt="imagen1" class="imagen-carta">
+        </div>
+    </div>
+    <script>
+        function abrirCarta() {
+            let sobre = document.getElementById("sobrecubierta");
+            sobre.classList.add("abrir");
+
+            setTimeout(() => {
+                sobre.style.display = "none";
+            }, 500); 
+        }
+    </script>
+    <div class="menu">
+        <a href="index.html" class="regreso" style="text-decoration: none;">menu</a>
+
+    </div>
+</body>
+</html>
