@@ -12,42 +12,32 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    padding: 10px;
 }
 
 .carta {
     position: relative;
-    width: 90%; /* Se adapta al tamaño de la pantalla */
-    max-width: 700px;
-    min-height: 400px; /* Reducimos un poco para móviles */
+    width: 700px;
+    min-height: 500px;
     background: #fff;
     border-bottom: solid rgb(31, 31, 31);
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    padding: 20px; /* Reducimos padding para móviles */
+    padding: 40px;
 }
 
 .contenido {
     font-family: Arial, sans-serif;
-    font-size: 18px; /* Ajustamos tamaño para mejor lectura */
+    font-size: 20px;
     color: #000000;
-    max-height: 350px; /* Reducimos un poco */
+    max-height: 450px;
     overflow: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
-    line-height: 1.6;
+    line-height: 1.8;
     text-align: justify;
 }
 
-/* Ajustar la imagen dentro de la carta */
-.imagen-carta {
-    max-width: 150px; /* Reducimos para móviles */
-    display: block;
-    margin: 15px auto;
-}
-
-/* Estilos para la sobrecubierta */
 .sobrecubierta {
     position: absolute;
     top: 0;
@@ -62,15 +52,44 @@ body {
     align-items: center;
 }
 
-/* Botón de regreso */
+.texto-sobre {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+
+.texto-sobre:hover {
+    color: #ffd000;
+}
+
+.contenido h3 {
+    margin-top: 3px;
+    text-align: center;
+}
+
+.imagen-carta {
+    max-width: 200px;
+    display: block;
+    margin: 20px auto;
+}
+
+.sobrecubierta.abrir {
+    transform: translateY(-100%);
+}
+
 .menu .regreso {
     margin-top: 1cm;
     display: inline-block;
-    padding: 10px 20px; /* Reducimos el tamaño */
+    padding: 12px 24px;
     background-color: #838383;
     color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 16px; /* Ajustamos tamaño */
+    text-decoration: none; 
+    font-size: 18px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 20px;
@@ -82,33 +101,4 @@ body {
     background-color: #555555;
     transform: scale(1.1);
     color: red;
-}
-
-/* 📱 Media Queries para teléfonos */
-@media screen and (max-width: 600px) {
-    .carta {
-        width: 95%; /* Se hace más pequeña en móviles */
-        min-height: 350px;
-        padding: 15px; /* Reducimos padding */
-    }
-
-    .contenido {
-        font-size: 16px; /* Texto más pequeño */
-        max-height: 300px; /* Ajuste en altura */
-        line-height: 1.4;
-    }
-
-    .imagen-carta {
-        max-width: 120px; /* Imagen más pequeña */
-    }
-
-    .texto-sobre {
-        font-size: 16px; /* Texto más pequeño */
-        padding: 8px;
-    }
-
-    .menu .regreso {
-        font-size: 14px; /* Reducimos para móviles */
-        padding: 8px 16px;
-    }
 }
