@@ -28,8 +28,6 @@ body {
     transform: rotateX(10deg);
     overflow: hidden;
     margin-bottom: 20px;
-    margin-top: 50px;
-    top: 60px;
 }
 
 .interior {
